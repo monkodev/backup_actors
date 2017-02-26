@@ -1,0 +1,33 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1>LISTADO DE ACTORES</h1>
+			<table class="table">
+			<tr class="lead">
+				<td></td>
+				<td>Nombre</td>
+				<td>Biografía</td>
+				<td>Fecha Nacimiento</td>
+				<td>Lugar Nacimiento</td>
+				<td>Fecha Fallecimiento</td>
+				<td>Lugar Fallecimiento</td>
+			</tr>
+			<% @actors.each do |actors| %>
+				<tr>
+				 <td><img src="<%= actors.image_url %>" alt="<%= actors.name %>" height="100" width="90"> </td>
+			      <td><%= actors.name %></td>
+			      <td><%= actors.bio %></td>
+			      <td><%= actors.birth_date %></td>
+			      <td><%= actors.birth_place %></td>
+			      <td><%= actors.death_date %></td>
+			      <td><%= actors.death_place %></td>
+			     </tr>
+			<% end %>
+			</table>
+		</div>
+	</div>
+</div>
+
+
+
+
